@@ -139,8 +139,31 @@ function isSeparator(c) {
 }
 
 function capitalizeWords(text) {
-  // Ide jöhet a megoldás
+  if (text.length === 0) {
+    return "";
+  }
+  let result = "";
+  let capitalizeNext = true;
+
+  for (let i = 0; i < text.length; i++) {
+    let currentChar = text[i];
+    if (capitalizeNext && !isSeparator(currentChar)) {
+      result += currentChar.toUpperCase();
+      capitalizeNext = false;
+    } else {
+      result += currentChar;
+    }
+    if (isSeparator(currentChar)) {
+      capitalizeNext = true;
+    }
+  }
+  return result;
 }
+
+console.log(
+  capitalizeWords("Ha a győzelem gátja a gát, akkor fel kell robbantani.")
+);
+
 
 // 6. Feladat - Felhasználók
 
