@@ -164,7 +164,6 @@ console.log(
   capitalizeWords("Ha a győzelem gátja a gát, akkor fel kell robbantani.")
 );
 
-
 // 6. Feladat - Felhasználók
 
 // 1. Készíts egy felhasználókat tartalmazó adatbázist!
@@ -187,17 +186,137 @@ console.log(
 
 // 1, 2, és 3-as feladat megoldása jöhetnek a komment alá
 
+let users = [
+  {
+    name: {
+      firsName: "Tony",
+      lastName: "Stark",
+    },
+    email: "iamironman@gmail.com",
+    password: "capsucks",
+  },
+  {
+    name: {
+      firsName: "Bruce",
+      lastName: "Banner",
+    },
+    email: "hulk@gmail.com",
+    password: "smash",
+  },
+  {
+    name: {
+      firsName: "Natasa",
+      lastName: "Romanov",
+    },
+    email: "blackwid@gmail.com",
+    password: "love",
+  },
+  {
+    name: {
+      firsName: "Thor",
+      lastName: "Odinson",
+    },
+    email: "abcd@gmail.com",
+    password: "hammer",
+  },
+];
+
 function logIn() {
-  // 4-es részfeladat megoldása
+  let userEmail = prompt("Kérem adja meg az email címét:");
+
+  if (!userEmail) {
+    alert("Bejelentkezés sikertelen: nem adott meg email címet.");
+    return;
+  }
+
+  let user = users.find((user) => user.email === userEmail);
+
+  if (!user) {
+    alert("Bejelentkezés sikertelen: nincs ilyen felhasználó.");
+    return;
+  }
+
+  let userPassword = prompt("Kérem adja meg a jelszavát:");
+
+  if (!userPassword) {
+    alert("Bejelentkezés sikertelen: nem adott meg jelszót.");
+    return;
+  }
+
+  if (user.password === userPassword) {
+    alert("Sikeres bejelentkezés!");
+  } else {
+    alert("Bejelentkezés sikertelen: hibás jelszó.");
+  }
 }
+
+// logIn();
 
 function changeEmail(currentEmail, newEmail) {
-  // 5-ös részfeladat megoldása
+  let user = users.find((user) => user.email === currentEmail);
+
+  if (!user) {
+    alert("Nincs ilyen e-mail címmel felhasználó az adatbázisban.");
+    return;
+  }
+
+  user.email = newEmail;
+  alert("Az e-mail cím sikeresen megváltoztatva.");
 }
+// console.log(users);
+// changeEmail("abcd@gmail.com", "thorRocks@gmail.com");
+// changeEmail(
+//   "viktor.balazs.endreg@gmail.com",
+//   "idatedtheblackwidow@hotmail.com"
+// );
 
 function register(email, password, passwordConfirmation, firstName, lastName) {
-  // 6-os részfeladat megoldása
+  if (password !== passwordConfirmation) {
+    alert("A jelszó és a jelszó megerősítése nem egyezik meg.");
+    return;
+  }
+
+  let existingUser = users.find((user) => user.email === email);
+
+  if (existingUser) {
+    alert("Már létezik ilyen e-mail címmel felhasználó az adatbázisban.");
+    return;
+  }
+
+  let newUser = {
+    name: {
+      firstName: firstName,
+      lastName: lastName,
+    },
+    email: email,
+    password: password,
+  };
+
+  users.push(newUser);
+  alert("Új felhasználó sikeresen létrehozve! Üdv a bosszúllók között!");
 }
+
+console.log(register("iamironman@gmail.com", "1234", "1234", "Tony", "Stark"));
+console.log(
+  register(
+    "viktor.balazs.endre@gmail.com",
+    "coolio1",
+    "coolio1",
+    "Balázs",
+    "Viktor"
+  )
+);
+console.log(
+  register(
+    "friderikusSándor@freemail.com",
+    "ászvagyfridi",
+    "gyászvagyfridi",
+    "Sándor",
+    "Friderikusz"
+  )
+);
+
+console.log(users);
 
 /*
   Mindenre válaszoltál? Átnézted? Patent?
