@@ -25,8 +25,21 @@
 // pl.: factorial(-2) -> undefined
 
 function factorial(num) {
-    // Ide jöhet a megoldás
+  if (num < 0) {
+    return undefined;
+  }
+  let result = 1;
+  for (let i = 1; i <= num; i++) {
+    result *= i;
+  }
+  return result;
 }
+
+
+console.log(factorial(5));
+console.log(factorial(0));
+console.log(factorial(3));
+console.log(factorial(-2));
 
 // 2. Feladat - FizzBuzz
 
@@ -38,7 +51,7 @@ function factorial(num) {
 // pl.: fizzbuzz(20) -> 1, 2, fizz, 4, buzz, fizz, 7, 8, fizz, buzz, 11, fizz, 13, 14, fizzbuzz, 16, 17, fizz, 19, buzz
 
 function fizzbuzz(n) {
-    // Ide jöhet a megoldás
+  // Ide jöhet a megoldás
 }
 
 // 3. Feladat - Unicum, csak pozitívan!
@@ -49,7 +62,7 @@ function fizzbuzz(n) {
 // pl.: getPositives([3, 20, 54]) -> [3, 20, 54]
 
 function getPositives(arr) {
-    // Ide jöhet a megoldás
+  // Ide jöhet a megoldás
 }
 
 // 4. Feladat - Perdülj, fordulj!
@@ -63,7 +76,7 @@ function getPositives(arr) {
 // pl.: rotate("hibás érték", [1, 2, 3]) -> [1, 2, 3]
 
 function rotate(direction, arr) {
-    // Ide jöhet a megoldás
+  // Ide jöhet a megoldás
 }
 
 // 5. Feladat - Nagy (Betűs) Szavak
@@ -73,12 +86,12 @@ function rotate(direction, arr) {
 // A feladathoz felhasználhatod a segítségként megadott isSeparator függvényt.
 
 function isSeparator(c) {
-    let separators = [" ", "\t", "\n", "\r", ",", ";", ".", "!", "?"];
-    return separators.includes(c);
+  let separators = [" ", "\t", "\n", "\r", ",", ";", ".", "!", "?"];
+  return separators.includes(c);
 }
 
 function capitalizeWords(text) {
-    // Ide jöhet a megoldás
+  // Ide jöhet a megoldás
 }
 
 // 6. Feladat - Felhasználók
@@ -104,15 +117,15 @@ function capitalizeWords(text) {
 // 1, 2, és 3-as feladat megoldása jöhetnek a komment alá
 
 function logIn() {
-    // 4-es részfeladat megoldása
+  // 4-es részfeladat megoldása
 }
 
 function changeEmail(currentEmail, newEmail) {
-    // 5-ös részfeladat megoldása
+  // 5-ös részfeladat megoldása
 }
 
 function register(email, password, passwordConfirmation, firstName, lastName) {
-    // 6-os részfeladat megoldása
+  // 6-os részfeladat megoldása
 }
 
 /*
