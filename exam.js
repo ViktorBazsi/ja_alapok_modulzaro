@@ -34,11 +34,11 @@ function factorial(num) {
   }
   return result;
 }
-
-console.log(factorial(5));
-console.log(factorial(0));
-console.log(factorial(3));
-console.log(factorial(-2));
+// Ellenőrzés:
+// console.log(factorial(5));
+// console.log(factorial(0));
+// console.log(factorial(3));
+// console.log(factorial(-2));
 
 // 2. Feladat - FizzBuzz
 
@@ -66,11 +66,11 @@ function fizzbuzz(n) {
       console.log(i);
     }
 }
-
-console.log(fizzbuzz(20));
-console.log(fizzbuzz(-5));
-console.log(fizzbuzz("alma"));
-console.log(fizzbuzz(8.56));
+// Ellenőrzés:
+// console.log(fizzbuzz(20));
+// console.log(fizzbuzz(-5));
+// console.log(fizzbuzz("alma"));
+// console.log(fizzbuzz(8.56));
 
 // 3. Feladat - Unicum, csak pozitívan!
 
@@ -88,10 +88,10 @@ function getPositives(arr) {
   }
   return positives;
 }
-
-console.log(getPositives([1, 10, -3, 4, -156, 0, 3, 4]));
-console.log(getPositives([-1, -2, -3]));
-console.log(getPositives([3, 20, 54]));
+// Ellenőrzés:
+// console.log(getPositives([1, 10, -3, 4, -156, 0, 3, 4]));
+// console.log(getPositives([-1, -2, -3]));
+// console.log(getPositives([3, 20, 54]));
 
 // 4. Feladat - Perdülj, fordulj!
 
@@ -122,10 +122,10 @@ function rotate(direction, arr) {
   }
   return arr;
 }
-
-console.log(rotate("left", [1, 2, 3]));
-console.log(rotate("right", [1, 2, 3]));
-console.log(rotate("hibás érték", [1, 2, 3]));
+// Ellenőrzés:
+// console.log(rotate("left", [1, 2, 3]));
+// console.log(rotate("right", [1, 2, 3]));
+// console.log(rotate("hibás érték", [1, 2, 3]));
 
 // 5. Feladat - Nagy (Betűs) Szavak
 
@@ -159,10 +159,10 @@ function capitalizeWords(text) {
   }
   return result;
 }
-
-console.log(
-  capitalizeWords("Ha a győzelem gátja a gát, akkor fel kell robbantani.")
-);
+// Ellenőrzés:
+// console.log(
+//   capitalizeWords("Ha a győzelem gátja a gát, akkor fel kell robbantani.")
+// );
 
 // 6. Feladat - Felhasználók
 
@@ -249,7 +249,7 @@ function logIn() {
     alert("Bejelentkezés sikertelen: hibás jelszó.");
   }
 }
-
+// Ellenőrzés: 
 // logIn();
 
 function changeEmail(currentEmail, newEmail) {
@@ -263,6 +263,7 @@ function changeEmail(currentEmail, newEmail) {
   user.email = newEmail;
   alert("Az e-mail cím sikeresen megváltoztatva.");
 }
+// Ellenőrzés:
 // console.log(users);
 // changeEmail("abcd@gmail.com", "thorRocks@gmail.com");
 // changeEmail(
@@ -296,27 +297,28 @@ function register(email, password, passwordConfirmation, firstName, lastName) {
   alert("Új felhasználó sikeresen létrehozve! Üdv a bosszúllók között!");
 }
 
-console.log(register("iamironman@gmail.com", "1234", "1234", "Tony", "Stark"));
-console.log(
-  register(
-    "viktor.balazs.endre@gmail.com",
-    "coolio1",
-    "coolio1",
-    "Balázs",
-    "Viktor"
-  )
-);
-console.log(
-  register(
-    "friderikusSándor@freemail.com",
-    "ászvagyfridi",
-    "gyászvagyfridi",
-    "Sándor",
-    "Friderikusz"
-  )
-);
+// Ellenőrzés:
+// console.log(register("iamironman@gmail.com", "1234", "1234", "Tony", "Stark"));
+// console.log(
+//   register(
+//     "viktor.balazs.endre@gmail.com",
+//     "coolio1",
+//     "coolio1",
+//     "Balázs",
+//     "Viktor"
+//   )
+// );
+// console.log(
+//   register(
+//     "friderikusSándor@freemail.com",
+//     "ászvagyfridi",
+//     "gyászvagyfridi",
+//     "Sándor",
+//     "Friderikusz"
+//   )
+// );
 
-console.log(users);
+// console.log(users);
 
 /*
   Mindenre válaszoltál? Átnézted? Patent?
