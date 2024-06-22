@@ -80,8 +80,18 @@ console.log(fizzbuzz(8.56));
 // pl.: getPositives([3, 20, 54]) -> [3, 20, 54]
 
 function getPositives(arr) {
-  // Ide jöhet a megoldás
+  let positives = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 0) {
+      positives.push(arr[i]);
+    }
+  }
+  return positives;
 }
+
+console.log(getPositives([1, 10, -3, 4, -156, 0, 3, 4]));
+console.log(getPositives([-1, -2, -3]));
+console.log(getPositives([3, 20, 54]));
 
 // 4. Feladat - Perdülj, fordulj!
 
