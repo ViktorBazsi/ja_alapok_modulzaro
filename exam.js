@@ -104,8 +104,28 @@ console.log(getPositives([3, 20, 54]));
 // pl.: rotate("hibás érték", [1, 2, 3]) -> [1, 2, 3]
 
 function rotate(direction, arr) {
-  // Ide jöhet a megoldás
+  if (direction === "left") {
+    if (arr.length <= 1) {
+      return arr;
+    }
+    const firstElement = arr.shift();
+    arr.push(firstElement);
+    return arr;
+  }
+  if (direction === "right") {
+    if (arr.length <= 1) {
+      return arr;
+    }
+    const lastElement = arr.pop();
+    arr.unshift(lastElement);
+    return arr;
+  }
+  return arr;
 }
+
+console.log(rotate("left", [1, 2, 3]));
+console.log(rotate("right", [1, 2, 3]));
+console.log(rotate("hibás érték", [1, 2, 3]));
 
 // 5. Feladat - Nagy (Betűs) Szavak
 
