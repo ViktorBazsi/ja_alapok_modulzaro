@@ -35,7 +35,6 @@ function factorial(num) {
   return result;
 }
 
-
 console.log(factorial(5));
 console.log(factorial(0));
 console.log(factorial(3));
@@ -51,8 +50,27 @@ console.log(factorial(-2));
 // pl.: fizzbuzz(20) -> 1, 2, fizz, 4, buzz, fizz, 7, 8, fizz, buzz, 11, fizz, 13, 14, fizzbuzz, 16, 17, fizz, 19, buzz
 
 function fizzbuzz(n) {
-  // Ide jöhet a megoldás
+  if (typeof n !== "number" || n <= 0 || n % 1 !== 0) {
+    console.log("Paraméternek csak pozitív egész szám adható meg.");
+    return;
+  }
+
+  for (let i = 1; i <= n; i++)
+    if (i % 3 === 0 && i % 5 === 0) {
+      console.log("fizzbuzz");
+    } else if (i % 3 === 0) {
+      console.log("fizz");
+    } else if (i % 5 === 0) {
+      console.log("buzz");
+    } else {
+      console.log(i);
+    }
 }
+
+console.log(fizzbuzz(20));
+console.log(fizzbuzz(-5));
+console.log(fizzbuzz("alma"));
+console.log(fizzbuzz(8.56));
 
 // 3. Feladat - Unicum, csak pozitívan!
 
